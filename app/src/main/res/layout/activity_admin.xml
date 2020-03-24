@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="adminmodle"
+            type="com.greatinnovus.promotionapp.app.AdminViewmodel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".app.AdminActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:gravity="center"
+            android:text="Admin"
+            android:textSize="@dimen/text_mega" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/boxbg"
+            android:gravity="center"
+            android:padding="@dimen/padding_small">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:afterTextChanged="@{(editable)->adminmodle.baseurlchanged(editable,1)}"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:hint="Base URl"
+                android:text="@{adminmodle.currenturl}"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_very_large"
+            android:text="@{adminmodle.urlone}"
+            android:onClick="@{()->adminmodle.fetchurl(1)}"
+            android:gravity="center" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_gravity="center"
+                android:gravity="center"
+            android:onClick="@{()->adminmodle.saveAndRestart()}"
+            />
+    </LinearLayout>
+</layout>

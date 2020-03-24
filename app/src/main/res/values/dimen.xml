@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_extra_very_small">8sp</dimen>
+    <dimen name="text_very_small">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_medium">14sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_very_large">18sp</dimen>
+    <dimen name="text_mega">20sp</dimen>
+
+
+
+
+    <!--margin values-->
+    <dimen name="margin_extra_very_small">4dp</dimen>
+    <dimen name="margin_very_small">6dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="margin_large">12dp</dimen>
+    <dimen name="margin_very_large">14dp</dimen>
+    <dimen name="margin_extra_very_large">16dp</dimen>
+
+
+    <!--padding values-->
+    <!--padding values-->
+    <dimen name="padding_extra_small">2dp</dimen>
+    <dimen name="padding_extra_very_small">4dp</dimen>
+    <dimen name="padding_very_small">6dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">10dp</dimen>
+    <dimen name="padding_large">12dp</dimen>
+    <dimen name="padding_very_large">14dp</dimen>
+    <dimen name="padding_extra_very_large">16dp</dimen>
+
+
+    <dimen name="fourtydp">40dp</dimen>
+    <dimen name="fourtfive">45dp</dimen>
+    <dimen name="fiftydb">50dp</dimen>
+    <dimen name="sixtydb">60dp</dimen>
+    <dimen name="thirtydp">30dp</dimen>
+    <dimen name="twintydp">20dp</dimen>
+    <dimen name="tendp">10dp</dimen>
+
+    <dimen name="twodb">2dp</dimen>
+    <dimen name="zerodb">0dp</dimen>
+
+    <dimen name="fourtyfivedb">45dp</dimen>
+    <dimen name="fourtytwodb">42dp</dimen>
+
+
+</resources>

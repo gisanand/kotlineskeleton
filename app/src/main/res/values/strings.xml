@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">skeleton</string>
+
+    <string name="permissioncontent">Need permission for fetch shop image and shop location.</string>
+    <string name="smspermissioncontent">Need permission for read login OTP.</string>
+    <string name="permissioncontentlocation">Need permission for fetch shop location.</string>
+    <string name="unkonwnerror">Something went to wrong</string>
+    <string name="ok">OK</string>
+
+
+    <string name="alerttitle">Kirtilals</string>
+</resources>
