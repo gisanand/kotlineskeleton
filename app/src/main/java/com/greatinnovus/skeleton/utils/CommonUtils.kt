@@ -38,7 +38,8 @@ import com.greatinnovus.promotionapp.app.App
 import com.greatinnovus.promotionapp.constants.StringConstants
 import com.greatinnovus.skeleton.R
 import com.greatinnovus.skeleton.utils.dropdownmodel
-
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -839,6 +840,72 @@ public fun String.isHavingvalue(): Boolean {
 
 }
 
+
+public fun String.isValidemail(): Boolean {
+    val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+    val pattern: Pattern = Pattern.compile(emailPattern, Pattern.CASE_INSENSITIVE)
+
+    if (this == null) {
+        return false;
+    }
+    if (this.length == 0) {
+        return false;
+    } else {
+        return if (this.equals("null", true)) {
+            false;
+        } else {
+            val matcher: Matcher = pattern.matcher(this)
+            matcher.matches()
+        }
+    }
+
+}
+
+
+public fun String.setDefaultvalue(dfvalue: String): String {
+
+    if (this.isHavingvalue()) {
+        return this
+    } else {
+        return dfvalue
+    }
+
+}
+
+public fun String.convertToDouble(): Double {
+    var doublvl: Double = 0.0
+    try {
+        if (this.isHavingvalue()) {
+            doublvl = this.toDouble()
+        } else {
+            doublvl = 0.0
+        }
+
+    } catch (e: Exception) {
+        e.printStackTrace()
+        doublvl = 0.0
+    }
+    return doublvl
+
+}
+public fun String.convertToFloat(): Float {
+    var doublvl: Float = 0f
+    try {
+
+        if (this.isHavingvalue()) {
+            doublvl = this.toFloat()
+        } else {
+            doublvl = 0f
+        }
+
+    } catch (e: Exception) {
+        e.printStackTrace()
+        doublvl = 0f
+    }
+    return doublvl
+
+}
+
 public fun Any.isinitialize(): Boolean {
     try {
         if (this != null) {
@@ -852,6 +919,8 @@ public fun Any.isinitialize(): Boolean {
     }
 
 }
+
+
 
 fun <T> ArrayList<T>.filterOnCondition(condition: (T) -> Boolean): ArrayList<T> {
     val result = arrayListOf<T>()
